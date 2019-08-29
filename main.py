@@ -3,7 +3,8 @@ from utils import *
 import matplotlib.pyplot as plt
 from scipy.linalg import expm, inv
 
-filename = "./data/0027.npz" # 20, 27, 42
+dataset = 27 # 20, 27, 42
+filename = "./data/00%d.npz"%dataset
 t, features, linear_velocity, rotational_velocity, K, b, cam_T_imu = load_data(filename)
 
 # (a) IMU Localization via EKF Prediction
@@ -106,5 +107,6 @@ for i in range(1, len(point_list)):
     update_points = np.concatenate((update_points, point_list[i].reshape(-1, 1)), axis=1)
 
 fig, ax = trajectory_features(out_mu, points, update_points, path_name=filename)
+
 
 
