@@ -10,7 +10,7 @@ Results of Dataset 20:
 
 Results of Dataset 27:
 <p float="left">
-  <img src="results/27.png" width="400" />
+  <img src="results/27a.png" width="400" />
   <img src="results/27b.png" width="400" /> 
 </p>
 
